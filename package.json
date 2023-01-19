@@ -1,0 +1,54 @@
+{
+    "name": "eslint-config-ltfe",
+    "version": "0.1.3",
+    "description": "React项目eslint代码规范，支持TS",
+    "main": "index.js",
+    "files": [
+        ".eslintrc.json",
+        "index.js"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aih5/eslint-config-ltfe.git"
+    },
+    "homepage": "https://github.com/aih5/eslint-config-ltfe/blob/main/README.md",
+    "author": "aih5",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
+    "scripts": {
+        "release": "npm test && release-it",
+        "test": "eslint --ext '.js,.ts,.tsx' tests/**"
+    },
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.19.0",
+        "@typescript-eslint/parser": "^4.19.0",
+        "babel-eslint": "^10.1.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-babel": "^5.3.1",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-flowtype": "^5.4.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jest": "^24.3.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-react": "^7.23.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-react-native": "^3.10.0"
+    },
+    "devDependencies": {
+        "@release-it/conventional-changelog": "^2.0.1",
+        "eslint": "^7.22.0",
+        "husky": "^4.3.0",
+        "release-it": "^14.5.0",
+        "typescript": "^4.2.3"
+    },
+    "peerDependencies": {
+        "eslint": "*"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm test"
+        }
+    }
+}
